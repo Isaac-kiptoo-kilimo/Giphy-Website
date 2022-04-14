@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { GiphyService } from '../service/giphy.service';
 
 @Component({
   selector: 'app-giphy',
@@ -7,9 +9,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GiphyComponent implements OnInit {
 
-  constructor() { }
+  constructor(private giphyService:GiphyService) { }
+  gifList:any;
 
   ngOnInit(): void {
+   this.giphyService.getGif().subscribe(data=>{
+    this.gifList=data;
+    })
   }
 
 }

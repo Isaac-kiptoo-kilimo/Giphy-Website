@@ -7,6 +7,7 @@ import { NavbarComponent } from './navbar/navbar/navbar.component';
 import { GiphyComponent } from './giphy/giphy.component';
 import { FormComponent } from './form/form.component';
 import { GiphyDetailComponent } from './giphy/giphy-detail/giphy-detail.component';
+import { HttpClientModule } from'@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -14,11 +15,13 @@ import { GiphyDetailComponent } from './giphy/giphy-detail/giphy-detail.componen
     NavbarComponent,
     GiphyComponent,
     FormComponent,
-    GiphyDetailComponent
+    GiphyDetailComponent,
+    
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
