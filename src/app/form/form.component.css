@@ -1,0 +1,9 @@
+.form-control{
+    border-radius: 0;
+}
+.inputSpan{
+    background-color: hotpink;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
